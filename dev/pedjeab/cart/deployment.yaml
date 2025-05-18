@@ -18,7 +18,7 @@ spec:
         app: cart
     spec:
       containers:
-      - image: nginx
-        name: nginx
-        resources: {}
+        - image: nginx:1.23
+          name: nginx
+          resources: {}
 status: {}
