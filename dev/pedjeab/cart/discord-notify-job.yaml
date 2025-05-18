@@ -23,4 +23,3 @@ spec:
                 -d '{"content": "✅ Kubernetes Job completed successfully!"}' \
                 https://discord.com/api/webhooks/1373543677632446475/qLoBlRomiQEMA_e0nxMzpIjblgmoVEYWDVFkRPj-DTXjqEXLCxYP_0O5pju3Nj7zr1tx
       restartPolicy: Never
-an
