@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sealed-secrets
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sealed-secrets
+  template:
+    metadata:
+      labels:
+        app: sealed-secrets
+    spec:
+      containers:
+      - name: webserver-simple
+        image: nginx
+        ports:
+        - containerPort: 80
