@@ -3,6 +3,12 @@ kind: Job
 metadata:
   name: discord-notify-job
   namespace: default
+metadata:
+  name: discord-notify-job
+  namespace: default
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
@@ -17,3 +23,4 @@ spec:
                 -d '{"content": "✅ Kubernetes Job completed successfully!"}' \
                 https://discord.com/api/webhooks/1373543677632446475/qLoBlRomiQEMA_e0nxMzpIjblgmoVEYWDVFkRPj-DTXjqEXLCxYP_0O5pju3Nj7zr1tx
       restartPolicy: Never
+an
