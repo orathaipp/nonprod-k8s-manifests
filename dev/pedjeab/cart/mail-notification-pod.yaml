@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mail-notification-pod
+  namespace: default
+spec:
+  containers:
+    - name: send-mail
+      image: alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - |
+          echo "📨 ติดตั้ง mailx...";
+          apk add --no-cache mailx;
+          echo "✅ DB Migration Completed Successfully!" | mailx -s "Kubernetes Notification" orathai.k@v-xip.com
+  restartPolicy: Never
