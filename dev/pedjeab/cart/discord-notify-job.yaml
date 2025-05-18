@@ -20,6 +20,6 @@ spec:
             - |
               echo "🔔 Sending Discord notification...";
               curl -X POST -H "Content-Type: application/json" \
-                -d '{"content": "✅ Kubernetes Job completed successfully!"}' \
+                -d '{"content": "✅ Kubernetes deployment completed successfully!"}' \
                 https://discord.com/api/webhooks/1373543677632446475/qLoBlRomiQEMA_e0nxMzpIjblgmoVEYWDVFkRPj-DTXjqEXLCxYP_0O5pju3Nj7zr1tx
       restartPolicy: Never
